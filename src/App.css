@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Grenze+Gotisch:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bellefair&family=Josefin+Slab:wght@400;600&display=swap");
+
+body {
+  font-family: "Josefin Slab", serif;
+  color: white;
+  font-weight: 300;
+  background: #fff9c4;
+  /* border-top: solid 10px #e6ee9c; */
+}
+
+/* 
+.overlay {
+  background: #00274b;
+} */
+
+h1,
+h3 {
+  color: #03a9f4;
+}
+
+h2,
+h6 {
+  color: #29b6f6;
+}
+
+h4 {
+  color: #62cdff;
+}
+
+h5 {
+  color: #00ffff;
+}
+
+.Hunt h1 {
+  color: #9575cd;
+  position: fixed;
+  top: 15px;
+  font-size: 46px;
+  padding-right: 10px;
+  border-radius: 50%;
+  border-right: 50px solid #9575cd;
+  /* border-bottom: 2px solid #9575cd;
+  border-bottom-right-radius: 50%; */
+}
+
+.Hunt h1:hover {
+  font-size: 42px;
+  color: #00b8d4;
+  border-color: #00b8d4;
+}
+
+.Hunt h4 {
+  color: #a78dd6;
+  /* color: #00b8d4; */
+  position: fixed;
+  top: 67px;
+  font-family: "Architects Daughter",
+    cursive;
+  padding-left: 4px;
+  font-size: 22px;
+}
+
+.navbar {
+  font-family: "Bellefair", serif;
+  font-weight: 600;
+  height: 110px;
+  letter-spacing: 1.5px;
+  background: #fff9c4d0;
+  border-bottom: 1px solid #eeff41;
+
+  /* border-bottom: 0.2px solid #00ffffa2; */
+}
+
+.Nav-sign-up {
+  color: #004d40;
+  text-decoration: none !important;
+  padding: 12px 30px;
+  /* background: #e6ee9c; */
+  font-family: "Architects Daughter", cursive;
+  /* letter-spacing: 1.5px; */
+  border: 1px solid #afb42b;
+  border-radius: 3px;
+  position: fixed;
+  top: 28px;
+  right: 205px;
+}
+
+.Nav-sign-up:hover span {
+  transition: all ease 500ms;
+  padding: 8px 24px;
+  color: #0e1b2e;
+  background-color: #e2fdff;
+  border-radius: 3px;
+}
+
+.Nav-sign-in {
+  color: #004d40;
+  text-decoration: none !important;
+  padding: 15px 30px;
+  font-family: "Architects Daughter", cursive;
+  letter-spacing: 1.5px;
+  /* border: 1px solid #00b0ff; */
+  border-radius: 3px;
+  background: #e6ee9c;
+  position: fixed;
+  top: 28px;
+  right: 30px;
+}
+
+.Nav-sign-in span {
+  color: #0e1b2e;
+  /* background-color: #f0f4c3; */
+  padding: 16px 20px;
+}
+
+.Nav-sign-in:hover span {
+  transition: all ease 500ms;
+  padding: 9px 26px;
+  color: #0e1b2e;
+  background-color: #f0f4c3;
+  border-radius: 3px;
+}
+
+.jumbotron {
+  background: #f0f4c3;
+  /* height: 350px; */
+  /* width: 97vw; */
+  margin-top: 36px;
+}
+
+.jumbotron p {
+  color: #b388ff;
+  font-weight: bold;
+}
+
+.strip-one {
+  text-align: center;
+  /* padding: 30px auto; */
+  font-size: 5rem;
+  background-color: #e6ee9c;
+}
+
+.strip-one p {
+  font-size: 2rem;
+  padding: 30px;
+  color: #827717;
+}
+
+.home-container {
+  /* width: 97vw; */
+  background: #fff9c4;
+  text-align: center;
+  /* border: 5px solid #eeff41; */
+  height: 1750px;
+}
+
+/* .home-container h5 {
+  margin-right: 1%;
+} */
+
+footer {
+  height: 3rem;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  background: #9e9d24;
+  /* border-top: 1px solid rgba(0, 255, 255, 0.4); */
+}
+
+footer p {
+  color: #fff;
+  margin: auto;
+  padding: 10px 0;
+}
+
+
+
+/* @keyframes example {
+  0% {
+    color: #00b6b6;
+  }
+
+  30% {
+    color: rgb(200, 231, 245);
+  }
+
+  70% {
+    color: rgb(125, 140, 221);
+  }
+
+  100% {
+    color: rgb(0, 255, 221);
+  }
+} */
+
+.nav-link {
+  color: #0e1b2e;
+  background-color: #c0ca33;
+
+}
+
+.nav-btn {
+  width: 120px;
+  text-align: center;
+}
+
+.navBar .nav-link:hover {
+  color: #0e1b2e;
+  background-color: #95f6ff;
+  border-radius: 3px;
+  padding-top: 6px;
+  transition: all ease 500ms;
+}
+
+
+.card-login {
+  margin: auto;
+  padding: 20px 0;
+  text-align: center;
+  max-width: 400px;
+  border-radius: 20px;
+  border: 12px solid rgba(187, 187, 187, 0.89);
+  border-bottom-width: 4px;
+  border-top-width: 4px;
+  background-color: rgba(0, 255, 255, 0.15);
+}
+
+.signUp {
+  color: #00ffff;
+}
+
+.signUp:hover {
+  color: #eee;
+  text-decoration: none;
+}
+
+.loginButton {
+  width: 100%;
+}
+
+.card-img-overlay h5 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+header {
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.login {
+  color: #74dfff;
+  text-decoration: none !important;
+  padding: 8px 16px;
+  font-family: "Architects Daughter", cursive;
+  letter-spacing: 1.5px;
+  border: 1px solid #00ffff98;
+  border-radius: 3px;
+}
+
+.login:hover {
+  border: none;
+}
+
+.login:hover span {
+  transition: all ease 500ms;
+  padding: 8px 24px;
+  color: #0e1b2e;
+  background-color: #e2fdff;
+  border-radius: 3px;
+}
+
+
+
+
+.card-footer:hover {
+  color: #9cdaf7;
+}
+
+.Modal {
+  margin-top: 100px;
+}
+
+.modalHeader {
+  background-color: #72aed6;
+}
+
+.modalHeader h4 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.container {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.all-in-one {
+  color: #b1dbf6;
+  padding-right: 16px;
+}
+
+.cash-icon {
+  padding-left: 40px;
+  padding-right: 20px;
+  margin-top: 20px;
+  border-left: 55px inset #ddd;
+  border-right: 20px inset #ddd;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.opacity {
+  opacity: .9;
+  background-color: #83dde069;
+  border-radius: 5px;
+  padding: 55px 15px 70px 10px;
+}
+
+.opacity-2 {
+  opacity: .9;
+  background-color: #28a7ac69;
+  border-radius: 5px;
+  padding: 70px 0px 60px 50px;
+}
+
+thead {
+  color: #29b6f6;
+  font-size: large;
+}
+
+tbody {
+  color: rgb(0, 255, 234);
+}
+
+.container-size {
+  margin-top: 50px;
+  padding: 10px 0;
+  text-align: center;
+  width: 60%;
+  margin: 100px auto auto auto;
+  border-bottom: 20px outset #83edfb9d;
+
+}
+
+.card {
+  box-shadow: 0 2px 5px #18a0a5;
+  border-radius: 10px;
+}
+
+.box {
+  border-radius: 7px;
+}
+
+.box:hover {
+  transition: all ease 500ms;
+  transform: scale(1.03);
+  border: 1px solid #83edfb9d;
+  border-radius: 25px;
+}
+
+
+
+form {
+  padding: 20px 0;
+  position: relative;
+  text-align: center;
+  max-width: 550px;
+  border-radius: 20px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+.task {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: auto auto 36px auto;
+  border-radius: 5px;
+  border: .1px solid #18a0a5;
+  max-width: 550px;
+}
+
+.homeImg {
+  width: 350px;
+  height: 300px;
+}
+
+.note {
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #18a0a5;
+  padding: 10px;
+  width: 240px;
+  margin: 90px 16px 0;
+  float: left;
+  color: #00ffff;
+  resize: none;
+  border: .1px solid #18a0a5;
+
+}
+
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+}
+
+.todo-button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: blue;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  outline: none !important;
+}
+
+form textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+.form-area {
+  position: relative;
+  width: 350px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  border: 20px solid #72aed6;
+  border-bottom-width: 7px;
+  border-top-width: 7px;
+}
+
+.input-area {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  resize: none;
+}
+
+.cardHeader {
+  font-weight: bold;
+}
