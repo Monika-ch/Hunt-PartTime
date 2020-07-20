@@ -33,8 +33,11 @@ function Home() {
 
       <div className="container-fluid strip-one">
         <p className="lead">
-          Tired of too many steps to apply for a job? Now Apply Hassle Free. We
-          Don't Ask Much!
+          <span className="pr-1">
+            Tired of too many steps to apply for a job?{" "}
+          </span>
+          <span className="pr-1">Now Apply Hassle Free. </span>
+          <span>We Don't Ask Much! </span>
         </p>
       </div>
 
