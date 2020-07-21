@@ -1,12 +1,8 @@
-import React,{useState} from "react";
-import { ModalBody,
-  ModalHeader,
-  Modal,
-  Button,
-  } from "reactstrap";
+import React, { useState } from "react";
+import { ModalBody, ModalHeader, Modal, Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import Register from './RegisterUser';
+import Register from "./RegisterUser";
 
 function Home(props) {
   const [loginModal, setloginModal] = useState(false);
@@ -27,21 +23,21 @@ function Home(props) {
           <hr className="my-2" />
           <p>More info</p>
           <p className="lead">
-            {/* <a
-              className="btn btn-primary btn-lg"
-              href="Jumbo action link"
-              role="button"
-              onClick={toggleLoginModal}
-            >
+            <span className="btn btn-primary btn-lg" onClick={toggleLoginModal}>
               Register Now
-            </a> */}
-            <Button color="primary" className="btn btn-primary btn-lg" onClick={toggleLoginModal}>Register Now</Button>
+            </span>
             <Modal isOpen={loginModal} toggle={toggleLoginModal}>
-            <ModalHeader toggle={toggleLoginModal}
-            close={closeBtn}gin
-            className="modalHeader"></ModalHeader>
-            <ModalBody>
-              <Register addUser={props.addUser}/>
+              <ModalHeader
+                toggle={toggleLoginModal}
+                close={closeBtn}
+                gin
+                className="modalHeader"
+              >
+                <h4 className="welcome">Hunt | Part-Time</h4>
+                <h5>Sign up for free !</h5>
+              </ModalHeader>
+              <ModalBody>
+                <Register addUser={props.addUser} />
               </ModalBody>
             </Modal>
           </p>

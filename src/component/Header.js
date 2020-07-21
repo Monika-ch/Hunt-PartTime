@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  CardTitle,
+  CardSubtitle,
   ModalBody,
   ModalHeader,
   Modal,
@@ -67,14 +69,12 @@ class Header extends React.Component {
               </span>
 
               <span>
-                {/* <NavLink className="Nav-sign-up ml-auto" to="/login"> */}
-                <Button
+                <span
                   className=" Nav-sign-up ml-auto"
                   onClick={this.toggleLoginModal}
                 >
-                  Sign Up
-                </Button>
-                {/* </NavLink> */}
+                  Sign up
+                </span>
                 <Modal
                   isOpen={this.state.loginModal}
                   toggle={this.toggleLoginModal}
@@ -84,12 +84,12 @@ class Header extends React.Component {
                     close={closeBtn}
                     gin
                     className="modalHeader"
-                  ></ModalHeader>
+                  >
+                    <h4 className="welcome">Hunt | Part-Time</h4>
+                    <h5>Sign up for free !</h5>
+                  </ModalHeader>
                   <ModalBody>
-                    <Register
-                      users={this.props.users}
-                      addUser={this.props.addUser}
-                    />
+                    <Register addUser={this.props.addUser} />
                   </ModalBody>
                 </Modal>
                 <NavLink className="Nav-sign-in ml-auto" to="/login">

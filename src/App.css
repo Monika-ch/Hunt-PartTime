@@ -55,8 +55,7 @@ h5 {
   /* color: #00b8d4; */
   position: fixed;
   top: 67px;
-  font-family: "Architects Daughter",
-    cursive;
+  font-family: "Architects Daughter", cursive;
   padding-left: 4px;
   font-size: 22px;
 }
@@ -74,14 +73,16 @@ h5 {
 
 .Nav-sign-up {
   color: #8d00eb;
-  text-decoration: none !important;
+  /* text-decoration: none !important; */
   padding: 15px 30px;
   font-family: "Architects Daughter", cursive;
+  /* background-color: none !important; */
   border: 1px solid #b388ff;
   border-radius: 3px;
   position: fixed;
   top: 28px;
   right: 185px;
+  cursor: pointer;
 }
 
 .Nav-sign-up:hover {
@@ -191,7 +192,6 @@ footer p {
 .nav-link {
   color: #0e1b2e;
   background-color: #c0ca33;
-
 }
 
 .nav-btn {
@@ -206,7 +206,6 @@ footer p {
   padding-top: 6px;
   transition: all ease 500ms;
 }
-
 
 .card-login {
   margin: auto;
@@ -272,9 +271,6 @@ header {
   border-radius: 3px;
 }
 
-
-
-
 .card-footer:hover {
   color: #9cdaf7;
 }
@@ -313,14 +309,14 @@ header {
 }
 
 .opacity {
-  opacity: .9;
+  opacity: 0.9;
   background-color: #83dde069;
   border-radius: 5px;
   padding: 55px 15px 70px 10px;
 }
 
 .opacity-2 {
-  opacity: .9;
+  opacity: 0.9;
   background-color: #28a7ac69;
   border-radius: 5px;
   padding: 70px 0px 60px 50px;
@@ -342,7 +338,6 @@ tbody {
   width: 60%;
   margin: 100px auto auto auto;
   border-bottom: 20px outset #83edfb9d;
-
 }
 
 .card {
@@ -360,8 +355,6 @@ tbody {
   border: 1px solid #83edfb9d;
   border-radius: 25px;
 }
-
-
 
 form {
   padding: 20px 0;
@@ -386,7 +379,7 @@ form {
   align-content: center;
   margin: auto auto 36px auto;
   border-radius: 5px;
-  border: .1px solid #18a0a5;
+  border: 0.1px solid #18a0a5;
   max-width: 550px;
 }
 
@@ -404,8 +397,7 @@ form {
   float: left;
   color: #00ffff;
   resize: none;
-  border: .1px solid #18a0a5;
-
+  border: 0.1px solid #18a0a5;
 }
 
 .note p {
