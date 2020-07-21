@@ -1,9 +1,22 @@
-import React from "react";
-import { Card, CardImg, CardFooter } from "reactstrap";
+import React,{useState} from "react";
+import { ModalBody,
+  ModalHeader,
+  Modal,
+  Button,
+  } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import Register from './RegisterUser';
 
-function Home() {
+function Home(props) {
+  const [loginModal, setloginModal] = useState(false);
+  const toggleLoginModal = () => setloginModal(!loginModal);
+  const closeBtn = (
+    <Button className="close" onClick={toggleLoginModal}>
+      &times;
+    </Button>
+  );
+
   return (
     <React.Fragment>
       <div className="jumbotron jumbotron-fluid mt-0 mb-0">
@@ -14,13 +27,23 @@ function Home() {
           <hr className="my-2" />
           <p>More info</p>
           <p className="lead">
-            <a
+            {/* <a
               className="btn btn-primary btn-lg"
               href="Jumbo action link"
               role="button"
+              onClick={toggleLoginModal}
             >
               Register Now
-            </a>
+            </a> */}
+            <Button color="primary" className="btn btn-primary btn-lg" onClick={toggleLoginModal}>Register Now</Button>
+            <Modal isOpen={loginModal} toggle={toggleLoginModal}>
+            <ModalHeader toggle={toggleLoginModal}
+            close={closeBtn}gin
+            className="modalHeader"></ModalHeader>
+            <ModalBody>
+              <Register addUser={props.addUser}/>
+              </ModalBody>
+            </Modal>
           </p>
         </div>
 

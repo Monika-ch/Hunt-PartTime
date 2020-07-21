@@ -1,13 +1,13 @@
 import * as ActionTypes from "./ActionTypes";
 
-export const addExpense = (date, merchant, item, amount,transactiontype) => ({
+export const addExpense = (date, merchant, item, amount, transactiontype) => ({
   type: ActionTypes.ADD_EXPENSE,
   payload: {
     date: date,
     merchant: merchant,
     item: item,
     amount: amount,
-    transactiontype:transactiontype,
+    transactiontype: transactiontype,
   },
 });
 
@@ -18,14 +18,11 @@ export const deleteItem = (id) => ({
   },
 });
 
-export const addProduct = (
-  stock,
-  limitPrice,
-) => ({
+export const addProduct = (stock, limitPrice) => ({
   type: ActionTypes.ADD_PRODUCT,
   payload: {
     stock: stock,
-    limitPrice: limitPrice
+    limitPrice: limitPrice,
   },
 });
 export const deleteProduct = (id) => ({
@@ -34,10 +31,21 @@ export const deleteProduct = (id) => ({
     id: id,
   },
 });
-export const addUser =(email,password)=>({
-  type:ActionTypes.ADD_USER,
-  payload:{
+export const addUser = (
+  name,
+  email,
+  contactNum,
+  requirement,
+  experience,
+  education
+) => ({
+  type: ActionTypes.ADD_USER,
+  payload: {
+    name: name,
     email: email,
-    password: password
-  }
+    contactNum: contactNum,
+    requirement: requirement,
+    experience: experience,
+    education: education,
+  },
 });

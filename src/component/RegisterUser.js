@@ -26,12 +26,17 @@ class Register extends Component {
     super(props);
     this.state = {
       users: this.props.users,
+      name: "",
       email: "",
-      password: "",
+      contactNum: "",
+      requirement: "",
+      experience:"",
+      education:"",
       isRegistered: false,
       touched: {
+        name:false,
         email: false,
-        password: false,
+        contactNum: false,
       },
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -39,26 +44,15 @@ class Register extends Component {
 
   handleSubmit = (values) => {
     console.log("Current state is: " + JSON.stringify(values));
-    this.props.addUser(values.email, values.password);
+    this.props.addUser(
+      values.name,
+      values.email,
+      values.contactNum,
+      values.requirement,
+      values.experience,
+      values.education
+      );
     alert("Successfully Added");
-    // const newUser = {
-    //     id: this.state.users.length,
-    //     email: values.email,
-    //     password: values.password
-    //   };
-
-    //   const users = [...this.state.users];
-    //   users.push(newUser);
-
-    //   this.setState(
-    //     {
-    //       users: users,
-    //       email:"",
-    //       password:""
-    //     },
-    //     () => {
-    //       alert("Current state is: " + JSON.stringify(this.state));
-    //     });
   };
 
   render() {
@@ -74,7 +68,30 @@ class Register extends Component {
                 <h5>Sign up for free !</h5>
               </CardSubtitle>
               <CardBody>
-                <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
+                <LocalForm  onSubmit={(values) =>this.handleSubmit(values)}>
+                <div className="row justify-content-center form-group">
+                    <div className="col-11">
+                      <Control.text
+                        model=".name"
+                        id="name"
+                        name="name"
+                        placeholder="Enter Your Name"
+                        className="form-control"
+                        validators={{
+                          required
+                        }}
+                      />
+                      <Errors
+                        className="text-danger"
+                        model=".name"
+                        show="touched"
+                        component="div"
+                        messages={{
+                          required: "Required"
+                        }}
+                      />
+                    </div>
+                  </div>
                   <div className="row justify-content-center form-group">
                     <div className="col-11">
                       <Control.text
@@ -103,28 +120,76 @@ class Register extends Component {
                   <div className="row justify-content-center form-group">
                     <div className="col-11">
                       <Control.text
-                        model=".password"
-                        id="password"
-                        name="password"
-                        placeholder="Password"
+                        model=".contactNum"
+                        id="contactNum"
+                        name="contactNum"
+                        placeholder="Contact Number"
                         className="form-control"
                         validators={{
-                          required,
-                          minLength: minLength(6),
-                          maxLength: maxLength(15),
+                          required
                         }}
                       />
                       <Errors
                         className="text-danger"
-                        model=".password"
+                        model=".contactNum"
                         show="touched"
                         component="div"
                         messages={{
                           required: "Required",
-                          minLength: "Must be 6 characters in length",
-                          maxLength: "Must be 15 characters or less",
+                         
                         }}
                       />
+                    </div>
+                  </div>
+                  <div className="row justify-content-center form-group">
+                    <div className="col-11">
+                      <Control.select
+                        model=".requirement"
+                        id="requirement"
+                        name="requirement"
+                        className="form-control"
+                      >
+                        <option>Select</option>
+                      <option>Marketing</option>
+                        <option>Daily Services</option>
+                        <option>Management</option>
+                        <option>IT Job</option>
+                        <option>Others</option>
+                      </Control.select>
+                    </div>
+                  </div>
+                  <div className="row justify-content-center form-group">
+                    <div className="col-11">
+                      <Control.select
+                        model=".experience"
+                        id="experience"
+                        name="experience"
+                        className="form-control"
+                      >
+                        <option>Select</option>
+                      <option>0-2</option>
+                        <option>2-5</option>
+                        <option>5-8</option>
+                        <option>8-12</option>
+                        <option>12+</option>
+                      </Control.select>
+                    </div>
+                  </div>
+                  <div className="row justify-content-center form-group">
+                    <div className="col-11">
+                      <Control.select
+                        model=".education"
+                        id="education"
+                        name="education"
+                        className="form-control"
+                      >
+                        <option>Select</option>
+                      <option>School Graduates</option>
+                        <option>Bachelor Degree</option>
+                        <option>Masters Degree</option>
+                        <option>Course Certified</option>
+                        <option>None</option>
+                      </Control.select>
                     </div>
                   </div>
                   <div className="row justify-content-center form-group">

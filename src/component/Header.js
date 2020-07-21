@@ -1,21 +1,25 @@
 import React from "react";
 import {
-  Nav,
+  ModalBody,
+  ModalHeader,
+  Modal,
+  Button,
   Navbar,
   NavbarToggler,
   Collapse,
-  NavItem,
-  Jumbotron,
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
+import Register from "./RegisterUser";
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isNavOpen: false,
+      loginModal:false
     };
     this.toggleNav = this.toggleNav.bind(this);
+    this.toggleLoginModal = this.toggleLoginModal.bind(this);
   }
 
   toggleNav() {
@@ -23,8 +27,18 @@ class Header extends React.Component {
       isNavOpen: !this.state.isNavOpen,
     });
   }
+  toggleLoginModal(){
+    this.setState({
+      loginModal: !this.state.loginModal,
+    });
+  }
 
   render() {
+    const closeBtn = (
+      <Button className="close" onClick={this.toggleLoginModal}>
+        &times;
+      </Button>
+    );
     return (
       <React.Fragment>
         <Navbar sticky="top" expand="sm">
@@ -53,9 +67,25 @@ class Header extends React.Component {
               </span>
 
               <span>
-                <NavLink className="Nav-sign-up ml-auto" to="/login">
-                  <span>Sign up</span>
-                </NavLink>
+                {/* <NavLink className="Nav-sign-up ml-auto" to="/login"> */}
+                  <Button
+                    className=" Nav-sign-up ml-auto"
+                    onClick={this.toggleLoginModal}
+                  >
+                    Sign Up
+                  </Button>
+                {/* </NavLink> */}
+                <Modal isOpen={this.state.loginModal} toggle={this.toggleLoginModal}>
+                  <ModalHeader
+                    toggle={this.toggleLoginModal}
+                    close={closeBtn}
+                    gin
+                    className="modalHeader"
+                  ></ModalHeader>
+                  <ModalBody>
+                    <Register users={this.props.users} addUser={this.props.addUser}/>
+                  </ModalBody>
+                </Modal>
                 <NavLink className="Nav-sign-in ml-auto" to="/login">
                   <span>Sign ⅈn</span>
                 </NavLink>
