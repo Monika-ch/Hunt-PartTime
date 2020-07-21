@@ -26,7 +26,8 @@ const mapDispatchToProps = {
     addExpense(date, merchant, item, amount, transactiontype),
   deleteItem: (id) => deleteItem(id),
   resetTransactionForm: () => actions.reset("transactionForm"),
-  addUser: (email, password) => addUser(email, password),
+  addUser: (name, email, contactNum, requirement, experience, education) =>
+    addUser(name, email, contactNum, requirement, experience, education),
 };
 const mapStateToProps = (state) => {
   return {
@@ -39,16 +40,20 @@ const mapStateToProps = (state) => {
 var userIsRegistered = true;
 class Main extends Component {
   render() {
-    const HomePage = () => {
-      return <Home />;
-    };
+    // const HomePage = () => {
+    //   return <Home />;
+    // };
 
     return (
       <div className="overlay">
-        <Header />
-
+        <Header addUser={this.props.addUser} />
         <Switch>
-          <Route path="/home" component={HomePage} />
+          <Route
+            exact
+            path="/home"
+            render={() => <Home addUser={this.props.addUser} />}
+          />
+          {/* <Route path="/home" component={HomePage} addUser={this.props.addUser}/> */}
           {/* <Route
             exact
             path="/portfolio"
