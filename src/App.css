@@ -112,7 +112,7 @@ h5 {
   transition: all ease 500ms;
   padding: 16px 32px;
   border-radius: 3px;
-  border: 1px solid #827717;
+  border: 1px solid #80cbc4;
   font-size: larger;
   background-color: #f0f4c3;
   color: #827717;
@@ -169,8 +169,6 @@ footer p {
   margin: auto;
   padding: 10px 0;
 }
-
-
 
 /* @keyframes example {
   0% {
