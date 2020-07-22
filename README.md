@@ -1,7 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+"Hunt Part-Time" is a React based project for part-time jobseekers.
 
- 
- 
+## Aim
+
+The project aims for the economic and social development of any nation - two of the crucial three pillars of 'Sustainability' other than environmental development.
+
 ## Available Scripts
 
 In the project directory, you can run:
