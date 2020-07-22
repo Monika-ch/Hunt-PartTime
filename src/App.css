@@ -152,6 +152,23 @@ h5 {
   height: 1750px;
 }
 
+.home-container p {
+  color: #827717;
+}
+
+.SearchBarDiv {
+  color: #000;
+}
+
+.Search input {
+  padding: 5px;
+}
+
+/* 
+.fa-search {
+  border: 1px solid #000;
+} */
+
 /* .home-container h5 {
   margin-right: 1%;
 } */
