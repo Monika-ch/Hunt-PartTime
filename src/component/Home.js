@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import JobSearch from "./JobSearch";
 import { Link } from "react-router-dom";
 import Register from "./RegisterUser";
+import JobsData from './JobsData';
 
 function Home(props) {
   const [loginModal, setloginModal] = useState(false);
@@ -66,6 +67,7 @@ function Home(props) {
           Tired of too many steps to apply for a job? Now Apply Hassle Free. We
           Don't Ask Much!
         </p>
+        <JobsData />
         <div className="SearchBarDiv d-flex justify-content-center">
           <JobSearch
             onUserInputText={""}
