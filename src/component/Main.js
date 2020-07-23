@@ -29,6 +29,7 @@ const mapDispatchToProps = {
   addUser: (name, email, contactNum, requirement, experience, education) =>
     addUser(name, email, contactNum, requirement, experience, education),
 };
+
 const mapStateToProps = (state) => {
   return {
     products: state.products,

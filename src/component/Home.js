@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
 import { ModalBody, ModalHeader, Modal, Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import JobSearch from "./JobSearch";
 import { Link } from "react-router-dom";
 import Register from "./RegisterUser";
-import JobsData from './JobsData';
+import JobsData from "./JobsData";
 
 function Home(props) {
+  const queryData = (title, location, salary) => {
+    console.log(title, location, salary);
+    setSearchInput({ title: title, location: location, salary: salary });
+  };
+
+  const [searchInput, setSearchInput] = useState(null);
   const [loginModal, setloginModal] = useState(false);
   const toggleLoginModal = () => setloginModal(!loginModal);
   const closeBtn = (
@@ -67,33 +73,8 @@ function Home(props) {
           Tired of too many steps to apply for a job? Now Apply Hassle Free. We
           Don't Ask Much!
         </p>
-        <JobsData />
-        <div className="SearchBarDiv d-flex justify-content-center">
-          <JobSearch
-            onUserInputText={""}
-            placeholder="Part-time title eg: Cashier"
-          />
-          <span className="SearchButton">
-            <i class="fa fa-search btn btn-primary" aria-hidden="true"></i>
-          </span>
-        </div>
-
-        <div className="SearchBarDiv d-flex justify-content-center">
-          <JobSearch
-            onUserInputText={""}
-            placeholder="Location radius eg: 1 km"
-          />
-          <span className="SearchButton">
-            <i class="fa fa-search btn btn-primary" aria-hidden="true"></i>
-          </span>
-        </div>
-
-        <div className="SearchBarDiv d-flex justify-content-center">
-          <JobSearch onUserInputText={""} placeholder="Salary eg: $50000 pm" />
-          <span className="SearchButton">
-            <i class="fa fa-search btn btn-primary" aria-hidden="true"></i>
-          </span>
-        </div>
+        <JobsData searchQuery={searchInput} />
+        <JobSearch queryData={queryData} />
       </div>
     </React.Fragment>
   );
