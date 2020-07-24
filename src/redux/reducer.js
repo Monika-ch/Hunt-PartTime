@@ -1,10 +1,7 @@
-import { PRODUCTS } from "../shared/products";
-import { EXPENSES } from "../shared/expenses";
 import { USERS} from '../shared/users';
 
 export const initialState = {
-  products: PRODUCTS,
-  expenses: EXPENSES,
+  
   users: USERS
 };
 
