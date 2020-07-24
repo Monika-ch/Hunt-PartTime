@@ -2,38 +2,19 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Home from "./Home";
-// import Portfolio from "./Portfolio";
-// import Budget from "./Budget";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import Login from "./Login";
 import { connect } from "react-redux";
-import { actions } from "react-redux-form";
-import {
-  addProduct,
-  deleteProduct,
-  addExpense,
-  deleteItem,
-  addUser,
-} from "../redux/ActionCreators";
-// import Income from "./Income";
+import { addUser } from "../redux/ActionCreators";
 import Register from "./RegisterUser";
-// import TodoList from "./TodoList";
 
 const mapDispatchToProps = {
-  addProduct: (stock, limitPrice) => addProduct(stock, limitPrice),
-  deleteProduct: (id) => deleteProduct(id),
-  addExpense: (date, merchant, item, amount, transactiontype) =>
-    addExpense(date, merchant, item, amount, transactiontype),
-  deleteItem: (id) => deleteItem(id),
-  resetTransactionForm: () => actions.reset("transactionForm"),
   addUser: (name, email, contactNum, requirement, experience, education) =>
     addUser(name, email, contactNum, requirement, experience, education),
 };
 
 const mapStateToProps = (state) => {
   return {
-    products: state.products,
-    items: state.expenses,
     users: state.users,
   };
 };
@@ -41,10 +22,6 @@ const mapStateToProps = (state) => {
 var userIsRegistered = true;
 class Main extends Component {
   render() {
-    // const HomePage = () => {
-    //   return <Home />;
-    // };
-
     return (
       <div className="overlay">
         <Header addUser={this.props.addUser} />
@@ -94,8 +71,7 @@ class Main extends Component {
               <Register users={this.props.users} addUser={this.props.addUser} />
             )}
           />
-          {/* <Route exact path="/marketgraph" render={()=> <MarketGraph stock={stock}/> } /> */}
-          {/* <Route exact path="/income" component={Income} /> */}
+         
           <Redirect to="/home" />
         </Switch>
 

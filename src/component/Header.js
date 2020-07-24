@@ -12,6 +12,7 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import Register from "./RegisterUser";
+import Login from './Login';
 
 class Header extends React.Component {
   constructor(props) {
@@ -19,9 +20,11 @@ class Header extends React.Component {
     this.state = {
       isNavOpen: false,
       loginModal: false,
+      registerModel:false,
     };
     this.toggleNav = this.toggleNav.bind(this);
     this.toggleLoginModal = this.toggleLoginModal.bind(this);
+    // this.toggleRegisterModel = this.toggleRegisterModel.bind(this);
   }
 
   toggleNav() {
@@ -34,7 +37,11 @@ class Header extends React.Component {
       loginModal: !this.state.loginModal,
     });
   }
-
+// toggleRegisterModel(){
+//   this.setState({
+//     registerModel : !this.state.registerModel
+//   });
+// }
   render() {
     const closeBtn = (
       <Button className="close" onClick={this.toggleLoginModal}>
@@ -63,26 +70,24 @@ class Header extends React.Component {
                 <NavLink className="nav-link nav-btn mr-4" to="/portfolio">
                   Create Jobs
                 </NavLink>
-                {/* <NavLink className="nav-link nav-btn mr-4" to="/todo">
-                  My Tasks
-                </NavLink> */}
+               
               </span>
 
-              <span>
-                <span
+             
+                {/* <span
                   className=" Nav-sign-up ml-auto"
-                  onClick={this.toggleLoginModal}
+                  onClick={this.toggleRegisterModel}
                 >
                   Sign up
                 </span>
                 <Modal
-                  isOpen={this.state.loginModal}
-                  toggle={this.toggleLoginModal}
+                  isOpen={this.state.registerModel}
+                  toggle={this.toggleRegisterModel}
                 >
                   <ModalHeader
-                    toggle={this.toggleLoginModal}
+                    toggle={this.toggleRegisterModel}
                     close={closeBtn}
-                    gin
+                   
                     className="modalHeader"
                   >
                     <h4 className="welcome">Hunt | Part-Time</h4>
@@ -91,11 +96,28 @@ class Header extends React.Component {
                   <ModalBody>
                     <Register addUser={this.props.addUser} />
                   </ModalBody>
+                </Modal> */}
+               
+                  <span className=" Nav-sign-up ml-auto"
+                  onClick={this.toggleLoginModal}>Sign ⅈn</span>
+                   <Modal
+                  isOpen={this.state.loginModal}
+                  toggle={this.toggleLoginModal}
+                >
+                  <ModalHeader
+                    toggle={this.toggleLoginModal}
+                    close={closeBtn}
+                    className="modalHeader"
+                  >
+                    <h4 className="welcome">Hunt | Part-Time</h4>
+                    <h5>Sign ⅈn</h5>
+                  </ModalHeader>
+                  <ModalBody>
+                    <Login  />
+                  </ModalBody>
                 </Modal>
-                <NavLink className="Nav-sign-in ml-auto" to="/login">
-                  <span>Sign ⅈn</span>
-                </NavLink>
-              </span>
+               
+             
             </Collapse>
           </div>
         </Navbar>
