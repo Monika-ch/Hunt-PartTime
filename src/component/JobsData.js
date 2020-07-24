@@ -212,12 +212,12 @@ class JobsData extends Component {
             <div className="mb-1 col-6 mx-auto">
               <Card className="card">
                 <CardBody>
-                  <Link className="link" to={p.url}>
+                  <a href={p.url} className="link">
                     <CardTitle className="card-link text-info">
                       {p.jobtitle}
                     </CardTitle>
                     <hr className="mx-5" />
-                  </Link>
+                  </a>
                   <CardSubtitle> {p.company}</CardSubtitle>
                   <p className="text-info">{p.city}</p>
                   <p>
