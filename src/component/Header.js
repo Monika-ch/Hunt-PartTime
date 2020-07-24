@@ -10,6 +10,7 @@ import {
   NavbarToggler,
   Collapse,
 } from "reactstrap";
+
 import { NavLink } from "react-router-dom";
 import Register from "./RegisterUser";
 
@@ -43,60 +44,40 @@ class Header extends React.Component {
     );
     return (
       <React.Fragment>
-        <Navbar sticky="top" expand="sm">
-          <div className="container-fluid">
-            <NavbarToggler onClick={this.toggleNav} />
-            <Collapse
-              isOpen={this.state.isNavOpen}
-              navbar
-              className="row navBar"
-            >
-              <NavLink className="Hunt col-1" to="/home">
-                <h1>Hunt</h1>
-                <h4>Part-Time</h4>
-              </NavLink>
+        <Navbar sticky="top">
+          <div className="container-fluid navbar">
+            <div className="Hunt col-1">
+              <h1>Hunt</h1>
+              <h4>Part-Time</h4>
+            </div>
 
-              <span className="col-10 d-flex justify-content-center">
-                <NavLink className="nav-link nav-btn mr-4" to="/budget">
-                  Search Jobs
-                </NavLink>
-                <NavLink className="nav-link nav-btn mr-4" to="/portfolio">
-                  Create Jobs
-                </NavLink>
-                {/* <NavLink className="nav-link nav-btn mr-4" to="/todo">
-                  My Tasks
-                </NavLink> */}
+            {/* <span>
+              <span
+                className=" Nav-sign-up ml-auto"
+                onClick={this.toggleLoginModal}
+              >
+                Sign up
               </span>
-
-              <span>
-                <span
-                  className=" Nav-sign-up ml-auto"
-                  onClick={this.toggleLoginModal}
-                >
-                  Sign up
-                </span>
-                <Modal
-                  isOpen={this.state.loginModal}
+              <Modal
+                isOpen={this.state.loginModal}
+                toggle={this.toggleLoginModal}
+              >
+                <ModalHeader
                   toggle={this.toggleLoginModal}
+                  close={closeBtn}
+                  gin
+                  className="modalHeader"
                 >
-                  <ModalHeader
-                    toggle={this.toggleLoginModal}
-                    close={closeBtn}
-                    gin
-                    className="modalHeader"
-                  >
-                    <h4 className="welcome">Hunt | Part-Time</h4>
-                    <h5>Sign up for free !</h5>
-                  </ModalHeader>
-                  <ModalBody>
-                    <Register addUser={this.props.addUser} />
-                  </ModalBody>
-                </Modal>
-                <NavLink className="Nav-sign-in ml-auto" to="/login">
-                  <span>Sign ⅈn</span>
-                </NavLink>
-              </span>
-            </Collapse>
+                  <h4 className="welcome">Hunt | Part-Time</h4>
+                  <h5>Sign up for free !</h5>
+                </ModalHeader>
+                <ModalBody>
+                  <Register addUser={this.props.addUser} />
+                </ModalBody>
+              </Modal> */}
+            <NavLink className="Nav-sign-in ml-auto" to="/login">
+              <span>Sign ⅈn</span>
+            </NavLink>
           </div>
         </Navbar>
       </React.Fragment>

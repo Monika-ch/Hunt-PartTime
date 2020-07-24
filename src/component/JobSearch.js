@@ -12,47 +12,36 @@ class JobSearch extends Component {
   render() {
     return (
       <React.Fragment>
-        <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
-          <Row className="form-group">
-            <Col md={5}>
-              <Control.text
-                model=".jobTitle"
-                id="jobTitle"
-                name="jobTitle"
-                placeholder="Job Title / Company eg: Cashier"
-                className="form-control"
-              />
-            </Col>
-
-            <Col md={5}>
-              <Control.text
-                model=".jobLocation"
-                id="jobLocation"
-                name="jobLocation"
-                placeholder="Location radius eg: 1 km"
-                className="form-control"
-              />
-            </Col>
-
-            {/* <Col md={4}>
-              <Control.text
-                model=".salary"
-                id="salary"
-                name="salary"
-                placeholder="Salary eg: $5000pm"
-                className="form-control"
-              />
-            </Col> */}
-
-            <Col md={1}>
-              <Button type="submit" color="primary">
-                {/* <span className="SearchButton"> */}
-                <i class="fa fa-search btn btn-primary" aria-hidden="true"></i>
-                {/* </span>{" "} */}
+        <div className="jobSearch bg-info mt-4 pt-2">
+          <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
+            <div className="form-group row">
+              <span className="jobTitle mt-2 mr-4">
+                <Control.text
+                  model=".jobTitle"
+                  id="jobTitle"
+                  name="jobTitle"
+                  placeholder="Job Title / Company eg: Cashier"
+                  className="form-control"
+                />
+              </span>
+              <span className="jobTitle mt-2 mr-3">
+                <Control.text
+                  model=".jobLocation"
+                  id="jobLocation"
+                  name="jobLocation"
+                  placeholder="Location Radius eg: 1 km"
+                  className="form-control"
+                />
+              </span>
+              <Button type="submit" color="primary" className="mt-2">
+                <i
+                  class="fa fa-search btn btn-primary p-0"
+                  aria-hidden="true"
+                ></i>
               </Button>
-            </Col>
-          </Row>
-        </LocalForm>
+            </div>
+          </LocalForm>
+        </div>
       </React.Fragment>
     );
   }
