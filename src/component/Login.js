@@ -32,7 +32,6 @@ class Login extends Component {
   handleSubmit = (values) => {
     console.log("Current state is: " + JSON.stringify(values));
     this.authenticateUser(values);
-    // this.props.addProduct(values.stock, values.limitPrice);
   };
   render() {
     return (
