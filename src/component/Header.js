@@ -71,10 +71,10 @@ class Header extends React.Component {
               <ModalHeader
                 toggle={this.toggleLoginModal}
                 close={closeBtn}
-                className="modalHeader"
+                className="modalHeader bg-info"
               >
-                <h4 className="welcome">Hunt | Part-Time</h4>
-                <h5>Sign ⅈn</h5>
+                <h4>Hunt | Part-Time</h4>
+                <h5>Sign In !</h5>
               </ModalHeader>
               <ModalBody>
                 <Login />

@@ -40,7 +40,7 @@ function Home(props) {
                 toggle={toggleLoginModal}
                 close={closeBtn}
                 gin
-                className="modalHeader"
+                className="modalHeader bg-info"
               >
                 <h4 className="welcome">Hunt | Part-Time</h4>
                 <h5>Sign up for free !</h5>

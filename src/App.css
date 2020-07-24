@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Grenze+Gotisch:wght@200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bellefair&family=Josefin+Slab:wght@400;600&display=swap");
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
 body {
   font-family: "Josefin Slab", serif;
   color: blue;
@@ -23,7 +30,8 @@ h4 {
 }
 
 h5 {
-  color: #00ffff;
+  color: #fff9c4;
+  font-weight: bold;
 }
 
 .Hunt h1 {
@@ -81,6 +89,7 @@ h5 {
   font-size: larger;
   background-color: #f0f4c3;
   color: #827717;
+  cursor: pointer;
 }
 
 .jobTitle {
@@ -100,7 +109,6 @@ h5 {
 
 .strip-one {
   text-align: center;
-  /* padding: 30px auto; */
   font-size: 5rem;
   background-color: #e6ee9c;
 }
@@ -112,23 +120,13 @@ h5 {
 }
 
 .home-container {
-  /* width: 97vw; */
   background: #fff9c4;
   text-align: center;
-  /* border: 5px solid #eeff41; */
   height: 1750px;
 }
 
 .home-container p {
   color: #827717;
-}
-
-.SearchBarDiv {
-  color: #000;
-}
-
-.Search input {
-  padding: 5px;
 }
 
 footer {
@@ -169,19 +167,16 @@ footer p {
   padding: 20px 0;
   text-align: center;
   max-width: 400px;
-  border-radius: 20px;
-  border: 12px solid rgba(187, 187, 187, 0.89);
-  border-bottom-width: 4px;
-  border-top-width: 4px;
   background-color: rgba(0, 255, 255, 0.15);
 }
 
 .signUp {
-  color: #00ffff;
+  color: grey;
+  font-weight: bold;
 }
 
 .signUp:hover {
-  color: #eee;
+  color: green;
   text-decoration: none;
 }
 
@@ -236,10 +231,6 @@ header {
   margin-top: 100px;
 }
 
-.modalHeader {
-  background-color: #72aed6;
-}
-
 .modalHeader h4 {
   color: #fff;
   font-weight: bold;
@@ -248,44 +239,6 @@ header {
 .container {
   padding: 10px 0;
   text-align: center;
-}
-
-.all-in-one {
-  color: #b1dbf6;
-  padding-right: 16px;
-}
-
-.cash-icon {
-  padding-left: 40px;
-  padding-right: 20px;
-  margin-top: 20px;
-  border-left: 55px inset #ddd;
-  border-right: 20px inset #ddd;
-  border-top-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.opacity {
-  opacity: 0.9;
-  background-color: #83dde069;
-  border-radius: 5px;
-  padding: 55px 15px 70px 10px;
-}
-
-.opacity-2 {
-  opacity: 0.9;
-  background-color: #28a7ac69;
-  border-radius: 5px;
-  padding: 70px 0px 60px 50px;
-}
-
-thead {
-  color: #29b6f6;
-  font-size: large;
-}
-
-tbody {
-  color: rgb(0, 255, 234);
 }
 
 .container-size {
@@ -297,22 +250,6 @@ tbody {
   border-bottom: 20px outset #83edfb9d;
 }
 
-.card {
-  box-shadow: 0 2px 5px #18a0a5;
-  border-radius: 10px;
-}
-
-.box {
-  border-radius: 7px;
-}
-
-.box:hover {
-  transition: all ease 500ms;
-  transform: scale(1.03);
-  border: 1px solid #83edfb9d;
-  border-radius: 25px;
-}
-
 form {
   padding: 20px 0;
   position: relative;
@@ -321,100 +258,4 @@ form {
   border-radius: 20px;
   margin: 0 auto;
   vertical-align: middle;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-weight: 300;
-}
-
-.task {
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  margin: auto auto 36px auto;
-  border-radius: 5px;
-  border: 0.1px solid #18a0a5;
-  max-width: 550px;
-}
-
-.homeImg {
-  width: 350px;
-  height: 300px;
-}
-
-.note {
-  border-radius: 7px;
-  box-shadow: 0 2px 5px #18a0a5;
-  padding: 10px;
-  width: 240px;
-  margin: 90px 16px 0;
-  float: left;
-  color: #00ffff;
-  resize: none;
-  border: 0.1px solid #18a0a5;
-}
-
-.note p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-.note button {
-  position: relative;
-  float: right;
-  margin-right: 10px;
-}
-
-.todo-button {
-  position: absolute;
-  right: 18px;
-  bottom: -18px;
-  background: blue;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  outline: none !important;
-}
-
-form textarea {
-  width: 100%;
-  border: none;
-  padding: 4px;
-  outline: none;
-  font-size: 1.2em;
-  font-family: inherit;
-  resize: none;
-}
-
-.form-area {
-  position: relative;
-  width: 350px;
-  margin: 30px auto 20px auto;
-  background: #fff;
-  padding: 15px;
-  border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
-  border: 20px solid #72aed6;
-  border-bottom-width: 7px;
-  border-top-width: 7px;
-}
-
-.input-area {
-  width: 100%;
-  border: none;
-  padding: 4px;
-  outline: none;
-  font-size: 1.2em;
-  resize: none;
-}
-
-.cardHeader {
-  font-weight: bold;
 }
