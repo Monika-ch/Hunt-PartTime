@@ -1,18 +1,5 @@
 import React from "react";
-import {
-  CardTitle,
-  CardSubtitle,
-  ModalBody,
-  ModalHeader,
-  Modal,
-  Button,
-  Navbar,
-  NavbarToggler,
-  Collapse,
-} from "reactstrap";
-
-import { NavLink } from "react-router-dom";
-import Register from "./RegisterUser";
+import { ModalBody, ModalHeader, Modal, Button, Navbar } from "reactstrap";
 import Login from "./Login";
 
 class Header extends React.Component {

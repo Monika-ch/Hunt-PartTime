@@ -1,7 +1,6 @@
-import React, { useState, Component } from "react";
+import React, { useState } from "react";
 import { ModalBody, ModalHeader, Modal, Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
 import Register from "./RegisterUser";
 import JobsData from "./JobsData";
 import JobSearch from "./JobSearch";

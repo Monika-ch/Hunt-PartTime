@@ -1,14 +1,5 @@
 import React, { Component } from "react";
-import {
-  Button,
-  Col,
-  Row,
-  Card,
-  CardTitle,
-  CardBody,
-  CardSubtitle,
-  CardFooter,
-} from "reactstrap";
+import { Button, Card, CardBody } from "reactstrap";
 import { Control, LocalForm, Errors } from "react-redux-form";
 import { Link } from "react-router-dom";
 

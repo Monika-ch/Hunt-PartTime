@@ -1,14 +1,5 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button,
-} from "reactstrap";
-import { Link } from "react-router-dom";
+import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
 // **********comment const jobData below for api testing************
 
