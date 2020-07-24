@@ -59,7 +59,7 @@ class Header extends React.Component {
             </div>
 
             <span
-              className=" Nav-sign-up ml-auto"
+              className=" Nav-sign-in ml-auto"
               onClick={this.toggleLoginModal}
             >
               Sign ⅈn
