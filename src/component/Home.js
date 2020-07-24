@@ -1,11 +1,7 @@
 import React, { useState, Component } from "react";
 import { ModalBody, ModalHeader, Modal, Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
-=======
-import JobSearch from "./JobSearch";
->>>>>>> 435a7910d7d9b09a868741c610ead38b16e971d8
 import Register from "./RegisterUser";
 import JobsData from "./JobsData";
 import JobSearch from "./JobSearch";
@@ -72,8 +68,4 @@ function Home(props) {
     </React.Fragment>
   );
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 435a7910d7d9b09a868741c610ead38b16e971d8
 export default Home;
