@@ -159,6 +159,7 @@ footer {
   position: fixed;
   width: 100%;
   background: #9e9d24;
+  border-bottom: #03a9f4 5px solid;
 }
 
 footer p {
