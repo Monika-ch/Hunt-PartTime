@@ -209,15 +209,17 @@ class JobsData extends Component {
       <div className="Jobdeck">
         <div className="Jobdeck-cards">
           {this.state.profiles.map((p) => (
-            <div className="mb-3 col-6">
+            <div className="mb-1 col-6 mx-auto">
               <Card className="card">
                 <CardBody>
-                  <Link to={p.url}>
-                    <CardTitle> {p.jobtitle}</CardTitle>
+                  <Link className="link" to={p.url}>
+                    <CardTitle className="card-link text-info">
+                      {p.jobtitle}
+                    </CardTitle>
+                    <hr className="mx-5" />
                   </Link>
                   <CardSubtitle> {p.company}</CardSubtitle>
-                  <p>{p.city}</p>
-                  {/* <CardText>{p.snippet}</CardText> */}
+                  <p className="text-info">{p.city}</p>
                   <p>
                     <small>{p.date}</small>
                   </p>
