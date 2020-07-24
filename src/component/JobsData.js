@@ -1,4 +1,14 @@
 import React, { Component } from "react";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+} from "reactstrap";
+import { Link } from "react-router-dom";
 
 // **********comment const jobData below for api testing************
 
@@ -196,23 +206,27 @@ class JobsData extends Component {
     items.push(this.state.profiles);
     console.log(`this is the final one ${items}`);
     return (
-      // <Flip bottom cascade duration={1600} delay={2000}>
       <div className="Jobdeck">
         <div className="Jobdeck-cards">
           {this.state.profiles.map((p) => (
-            <div>
-              {p.advertiserId}
-              {p.jobtitle}
-              {p.company}
-              {p.city}
-              {p.snippet}
-              {p.date}
-              {p.url}
+            <div className="mb-3 col-6">
+              <Card className="card">
+                <CardBody>
+                  <Link to={p.url}>
+                    <CardTitle> {p.jobtitle}</CardTitle>
+                  </Link>
+                  <CardSubtitle> {p.company}</CardSubtitle>
+                  <p>{p.city}</p>
+                  {/* <CardText>{p.snippet}</CardText> */}
+                  <p>
+                    <small>{p.date}</small>
+                  </p>
+                </CardBody>
+              </Card>
             </div>
           ))}
         </div>
       </div>
-      // </Flip>
     );
   }
 }

@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 
-const HUNT_API = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/";
-
-let padToThree = (number) => (number <= 999 ? `00${number}`.slice(-3) : number);
-
 class JobCard extends Component {
   render() {
     let imgSrc = `${POKE_API}${padToThree(this.props.id)}.png`;

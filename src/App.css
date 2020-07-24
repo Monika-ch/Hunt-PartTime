@@ -111,6 +111,7 @@ h5 {
   text-align: center;
   font-size: 5rem;
   background-color: #e6ee9c;
+  padding-bottom: 22px;
 }
 
 .strip-one p {
@@ -122,11 +123,15 @@ h5 {
 .home-container {
   background: #fff9c4;
   text-align: center;
-  height: 1750px;
+  width: 90%;
 }
 
 .home-container p {
   color: #827717;
+}
+
+.card {
+  background-color: #e6fffe;
 }
 
 footer {
