@@ -197,25 +197,25 @@ class JobsData extends Component {
     items.push(this.state.profiles);
     console.log(`this is the final one ${items}`);
     return (
-      <div className="Jobdeck">
+      <div className="Jobdeck m-5 p-3">
         <div>
           {this.state.profiles.map((p) => (
-            <div className="mb-1 col-6 mx-auto">
-              <Card className="card">
-                <CardBody>
-                  <a href={p.url} className="link">
-                    <CardTitle className="card-link text-info">
+            <div className="my-5 col-6 mx-auto">
+              <div className="card">
+                <div>
+                  <a href={p.url} className="links">
+                    <h5 className="card-link page-heading text-info p-4">
                       {p.jobtitle}
-                    </CardTitle>
-                    <hr className="mx-5" />
+                    </h5>
+                    {/* <hr className="mx-5" /> */}
                   </a>
-                  <CardSubtitle> {p.company}</CardSubtitle>
+                  <span className="companyName"> {p.company}</span>
                   <p className="text-info">{p.city}</p>
                   <p>
                     <small>{p.date}</small>
                   </p>
-                </CardBody>
-              </Card>
+                </div>
+              </div>
             </div>
           ))}
         </div>

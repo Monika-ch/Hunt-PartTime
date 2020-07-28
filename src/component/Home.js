@@ -35,11 +35,11 @@ function Home(props) {
   return (
     <React.Fragment>
       <JobSearch queryData={queryData} />
-      {searchInput != null && (
-        <div className="container-fluid home-container my-3">
-          <JobsData searchQuery={searchInput} />
-        </div>
-      )}
+      {/* {searchInput != null && ( */}
+      <div className="container-fluid home-container my-3">
+        <JobsData searchQuery={searchInput} />
+      </div>
+      {/* )} */}
 
       <div className="jumbotron jumbotron-fluid mt-0 mb-0">
         <div className="container pt-0">

@@ -82,56 +82,6 @@ h5 {
 .navbar {
   height: 95px;
   border-bottom: 5px solid #38a1be;
-  /* background-image: repeating-linear-gradient(
-      112.5deg,
-      rgba(255, 252, 220, 0.13) 0px,
-      rgba(255, 252, 220, 0.13) 0px,
-      transparent 0px,
-      transparent 1px,
-      rgba(255, 252, 220, 0.13) 1px,
-      rgba(255, 252, 220, 0.13) 4px,
-      transparent 4px,
-      transparent 5px,
-      rgba(255, 252, 220, 0.13) 5px,
-      rgba(255, 252, 220, 0.13) 8px
-    ),
-    repeating-linear-gradient(
-      360deg,
-      rgba(255, 252, 220, 0.13) 0px,
-      rgba(255, 252, 220, 0.13) 0px,
-      transparent 0px,
-      transparent 1px,
-      rgba(255, 252, 220, 0.13) 1px,
-      rgba(255, 252, 220, 0.13) 4px,
-      transparent 4px,
-      transparent 5px,
-      rgba(255, 252, 220, 0.13) 5px,
-      rgba(255, 252, 220, 0.13) 8px
-    ),
-    linear-gradient(495deg, rgb(255, 250, 224), rgb(214, 228, 110)); */
-  /* background: #fffcdcd0; */
-  /* background-image: repeating-linear-gradient(
-      80deg,
-      rgb(253, 255, 230) 0px,
-      rgb(253, 255, 230) 10px,
-      transparent 10px,
-      transparent 12px
-    ),
-    repeating-linear-gradient(
-      228deg,
-      rgb(253, 255, 230) 0px,
-      rgb(253, 255, 230) 10px,
-      transparent 10px,
-      transparent 12px
-    ),
-    repeating-linear-gradient(
-      127deg,
-      rgb(253, 255, 230) 0px,
-      rgb(253, 255, 230) 10px,
-      transparent 10px,
-      transparent 12px
-    ),
-    linear-gradient(90deg, rgb(147, 255, 255), rgb(110, 196, 240)); */
   background-image: repeating-linear-gradient(146deg,
       hsla(194, 94%, 69%, 0.14) 0px,
       hsla(194, 94%, 69%, 0.14) 55px,
@@ -146,14 +96,10 @@ h5 {
 }
 
 .Nav-sign-in {
-  /* color: #004d40;
-  text-decoration: none !important; */
+  /* color: #004d40; */
   padding: 12px 22px;
   font-family: "Bellefair", serif;
   letter-spacing: 1.5px;
-  /* border: 1px solid #00b0ff;
-  border-radius: 3px;
-  background: #e6ee9c; */
   position: fixed;
   top: 18px;
   right: 36px;
@@ -164,9 +110,7 @@ h5 {
   border-radius: 3px;
   border: 1px solid #00b0ff;
   font-size: larger;
-  /* background-color: #f0f4c3; */
-  /* color: #827717; */
-  /* cursor: pointer; */
+
 }
 
 .jobTitle {
@@ -186,56 +130,6 @@ h5 {
       transparent 55px,
       transparent 110px),
     linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
-  /* background-image: repeating-linear-gradient(
-      80deg,
-      rgb(230, 238, 156) 0px,
-      rgb(230, 238, 156) 10px,
-      transparent 10px,
-      transparent 12px
-    ),
-    repeating-linear-gradient(
-      228deg,
-      rgb(230, 238, 156) 0px,
-      rgb(230, 238, 156) 10px,
-      transparent 10px,
-      transparent 12px
-    ),
-    repeating-linear-gradient(
-      127deg,
-      rgb(230, 238, 156) 0px,
-      rgb(230, 238, 156) 10px,
-      transparent 10px,
-      transparent 12px
-    ),
-    linear-gradient(90deg, rgb(37, 220, 220), rgb(14, 136, 199)); */
-
-  /* background-image: repeating-linear-gradient(
-      112.5deg,
-      rgba(255, 252, 220, 0.13) 0px,
-      rgba(255, 252, 220, 0.13) 0px,
-      transparent 0px,
-      transparent 1px,
-      rgba(255, 252, 220, 0.13) 1px,
-      rgba(255, 252, 220, 0.13) 4px,
-      transparent 4px,
-      transparent 5px,
-      rgba(255, 252, 220, 0.13) 5px,
-      rgba(255, 252, 220, 0.13) 8px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(255, 252, 220, 0.13) 0px,
-      rgba(255, 252, 220, 0.13) 0px,
-      transparent 0px,
-      transparent 1px,
-      rgba(255, 252, 220, 0.13) 1px,
-      rgba(255, 252, 220, 0.13) 4px,
-      transparent 4px,
-      transparent 5px,
-      rgba(255, 252, 220, 0.13) 5px,
-      rgba(255, 252, 220, 0.13) 8px
-    ),
-    linear-gradient(135deg, rgb(255, 250, 224), rgb(214, 228, 110)); */
   min-height: 48.9vh;
   margin-top: 36px;
 }
@@ -252,36 +146,6 @@ h5 {
 
 .strip-one {
   text-align: center;
-  /* background-image: repeating-linear-gradient(
-      112.5deg,
-      rgba(255, 252, 220, 0.13) 0px,
-      rgba(255, 252, 220, 0.13) 0px,
-      transparent 0px,
-      transparent 1px,
-      rgba(255, 252, 220, 0.13) 1px,
-      rgba(255, 252, 220, 0.13) 4px,
-      transparent 4px,
-      transparent 5px,
-      rgba(255, 252, 220, 0.13) 5px,
-      rgba(255, 252, 220, 0.13) 8px
-    ),
-    repeating-linear-gradient(
-      218deg,
-      rgba(255, 252, 220, 0.13) 0px,
-      rgba(255, 252, 220, 0.13) 0px,
-      transparent 0px,
-      transparent 1px,
-      rgba(255, 252, 220, 0.13) 1px,
-      rgba(255, 252, 220, 0.13) 4px,
-      transparent 4px,
-      transparent 5px,
-      rgba(255, 252, 220, 0.13) 5px,
-      rgba(255, 252, 220, 0.13) 8px
-    ),
-    linear-gradient(353deg, rgb(255, 250, 224), rgb(214, 228, 110)); */
-  /* border-top: #03a8f434 1px solid; */
-  /* background-color: #e6ee9c; */
-  /* padding-bottom: 15px; */
   background-image: repeating-linear-gradient(205deg,
       rgba(102, 216, 250, 0.08) 0px,
       rgba(102, 216, 250, 0.08) 35px,
@@ -302,7 +166,6 @@ h5 {
 }
 
 .home-container {
-  background: #fff9c4;
   text-align: center;
   width: 90%;
 }
@@ -312,20 +175,18 @@ h5 {
 }
 
 .Jobdeck {
+  background-color: rgba(0, 255, 255, 0.15);
+
   border-bottom: 1px solid aqua;
 }
 
 .card {
-  background-color: #ebfafa;
-}
-
-.link {
   background-color: #fff;
-  text-decoration: none !important;
+  border: 1px solid rgb(192, 255, 252);
+  border-bottom: 5px solid rgb(192, 255, 252);
 }
 
 .card-link {
-  /* border: 1px solid rgb(192, 255, 252); */
   padding: 10px;
 }
 
@@ -333,14 +194,17 @@ h5 {
   color: green !important;
 }
 
+.companyName {
+  color: #b388ff;
+  background: #;
+}
+
 footer {
-  /* height: 3rem; */
   text-align: center;
   bottom: 0;
   /* position: fixed; */
   width: 100%;
   background: #9e9d24;
-  /* border-bottom: #03a9f4 5px solid; */
 }
 
 footer p {
