@@ -37,12 +37,12 @@ function Footer() {
           </p>
           <ul className="list">
             <li className="text-white">
-              <Link to="/about/#whyPartTime" className="links">
+              <Link to="/contact/#contact" className="links">
                 <em>How To Reach Us</em>
               </Link>
             </li>
             <li className="text-white">
-              <Link to="/about/#features" className="links">
+              <Link to="/contact/#feedback" className="links">
                 <em>Feedback</em>
               </Link>
             </li>
