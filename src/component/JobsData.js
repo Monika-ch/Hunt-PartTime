@@ -198,7 +198,7 @@ class JobsData extends Component {
     console.log(`this is the final one ${items}`);
     return (
       <div className="Jobdeck">
-        <div className="Jobdeck-cards">
+        <div>
           {this.state.profiles.map((p) => (
             <div className="mb-1 col-6 mx-auto">
               <Card className="card">

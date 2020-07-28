@@ -2,6 +2,7 @@ import React from "react";
 import { ModalBody, ModalHeader, Modal, Button, Navbar } from "reactstrap";
 import Login from "./Login";
 import Register from "./RegisterUser";
+import { Link } from "react-router-dom";
 
 class Header extends React.Component {
   constructor(props) {
@@ -41,7 +42,11 @@ class Header extends React.Component {
         <Navbar sticky="top" className="m-0 p-0">
           <div className="container-fluid navbar">
             <div className="Hunt col-1">
-              <h1>Hunt</h1>
+              <h1>
+                <Link to="/home" className="hunt-link">
+                  Hunt
+                </Link>
+              </h1>
               <h4>Part-Time</h4>
             </div>
 

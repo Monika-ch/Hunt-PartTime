@@ -30,13 +30,21 @@ function Footer() {
           <p>Copyright ⓒ {year} Hunt Part-Time. All rights reserved.</p>
         </div>
         <div className="col-4">
-          <p className="lead">Contact</p>
+          <p className="lead links">
+            <Link className="links" to="/contact">
+              Contact
+            </Link>
+          </p>
           <ul className="list">
             <li className="text-white">
-              <em>How To Reach Us</em>
+              <Link to="/about/#whyPartTime" className="links">
+                <em>How To Reach Us</em>
+              </Link>
             </li>
             <li className="text-white">
-              <em>Feedback</em>
+              <Link to="/about/#features" className="links">
+                <em>Feedback</em>
+              </Link>
             </li>
           </ul>
         </div>

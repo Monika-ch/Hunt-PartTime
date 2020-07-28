@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Home from "./Home";
-import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import About from "./About";
+import Contact from "./Contact";
+import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { addUser } from "../redux/ActionCreators";
 // import Register from "./RegisterUser";
-// import Login from "./login";
+import Login from "./Login";
 
 const mapDispatchToProps = {
   addUser: (name, email, contactNum, requirement, experience, education) =>
@@ -34,14 +35,14 @@ class Main extends Component {
           />
           {/* <Route path="/home" component={HomePage} addUser={this.props.addUser}/> */}
           {/* <Route path="/todo" component={TodoList} /> */}
-          {/* <Route
+          <Route
             exact
             path="/login"
             render={() => (
               <Login isRegistered={userIsRegistered} users={this.props.users} />
             )}
           />
-          <Route
+          {/* <Route
             exact
             path="/registerUser"
             render={() => (
@@ -49,6 +50,8 @@ class Main extends Component {
             )}
           /> */}
           <Route exact path="/about" render={() => <About />} />
+          <Route exact path="/contact" render={() => <Contact />} />
+
           <Redirect to="/home" />
         </Switch>
 

@@ -12,10 +12,10 @@ class JobSearch extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="jobSearch bg-info">
+        <div className="bg-info">
           <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
             <div className="form-group row">
-              <span className="jobTitle mt-2 mr-4">
+              <span className="jobTitle mt-1 mr-4">
                 <Control.text
                   model=".jobTitle"
                   id="jobTitle"
@@ -24,7 +24,7 @@ class JobSearch extends Component {
                   className="form-control"
                 />
               </span>
-              <span className="jobTitle mt-2 mr-3">
+              <span className="jobTitle mt-1 mr-3">
                 <Control.text
                   model=".jobLocation"
                   id="jobLocation"
@@ -33,7 +33,7 @@ class JobSearch extends Component {
                   className="form-control"
                 />
               </span>
-              <Button type="submit" color="primary" className="mt-2">
+              <Button type="submit" color="primary" className="mt-1">
                 <i
                   class="fa fa-search btn btn-primary p-0"
                   aria-hidden="true"

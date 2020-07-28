@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { ModalBody, ModalHeader, Modal, Button } from "reactstrap";
+import { Link } from "react-router-dom";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Register from "./RegisterUser";
 import Login from "./Login";
@@ -15,20 +17,20 @@ function Home(props) {
 
   const [searchInput, setSearchInput] = useState(null);
 
-  const [loginModal, setloginModal] = useState(false);
-  const [registerModal, setregisterModal] = useState(false);
-  const toggleLoginModal = () => {
-    setloginModal(!loginModal);
-    setregisterModal(false);
-  };
-  const toggleRegisterModal = () => {
-    setregisterModal(!registerModal);
-  };
-  const closeBtn = (
-    <Button className="close" onClick={toggleLoginModal}>
-      &times;
-    </Button>
-  );
+  // const [loginModal, setloginModal] = useState(false);
+  // const [registerModal, setregisterModal] = useState(false);
+  // const toggleLoginModal = () => {
+  //   setloginModal(!loginModal);
+  //   setregisterModal(false);
+  // };
+  // const toggleRegisterModal = () => {
+  //   setregisterModal(!registerModal);
+  // };
+  // const closeBtn = (
+  //   <Button className="close" onClick={toggleLoginModal}>
+  //     &times;
+  //   </Button>
+  // );
 
   return (
     <React.Fragment>
@@ -44,15 +46,19 @@ function Home(props) {
           <p className="lead pt-0">Looking For Part Times ?</p>
           <h1 className="display-4 ">Now Hire or Get Hired.</h1>
           <hr className="my-2" />
-          <p>More info</p>
+          <p>
+            <Link className="jumbo-link" to="/about">
+              More info
+            </Link>
+          </p>
           <p className="lead mt-4">
             <span
               className="btn btn-primary btn-lg"
-              onClick={toggleRegisterModal}
+              onClick={props.toggleRegisterModal}
             >
               Register Now
             </span>
-            <Modal isOpen={registerModal} toggle={toggleRegisterModal}>
+            {/* <Modal isOpen={registerModal} toggle={toggleRegisterModal}>
               <ModalHeader
                 toggle={toggleRegisterModal}
                 className="modalHeader bg-info"
@@ -60,13 +66,13 @@ function Home(props) {
                 <h4>Hunt | Part-Time</h4>
                 <h5>Sign up for free !</h5>
               </ModalHeader>
-              <ModalBody>
-                <Register
-                  addUser={props.addUser}
-                  toggleRegisterModal={toggleLoginModal}
-                />
-              </ModalBody>
-            </Modal>
+              <ModalBody> */}
+            <Register
+              addUser={props.addUser}
+              toggleRegisterModal={props.toggleLoginModal}
+            />
+            {/* </ModalBody>
+            </Modal> */}
 
             {/* <Modal isOpen={loginModal} toggle={toggleLoginModal}>
               <ModalHeader
@@ -85,7 +91,7 @@ function Home(props) {
         </div>
       </div>
       <div className="container-fluid strip-one">
-        <p className="lead">
+        <p className="lead mb-0">
           <span className="pr-1">
             Tired of too many steps to apply for a job?{" "}
           </span>

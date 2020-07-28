@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Button, Card, CardBody } from "reactstrap";
+import {
+  ModalBody,
+  ModalHeader,
+  Modal,
+  Button,
+  Card,
+  CardBody,
+} from "reactstrap";
 import { Control, LocalForm, Errors } from "react-redux-form";
 import { Link } from "react-router-dom";
 
@@ -21,6 +28,8 @@ class Register extends Component {
       experience: "",
       education: "",
       isRegistered: false,
+      registerModal: false,
+      loginModal: false,
       touched: {
         name: false,
         email: false,
@@ -43,148 +52,178 @@ class Register extends Component {
     alert("Successfully Added");
   };
 
+  toggleRegisterModal = () => {
+    this.setState(!this.state.registerModal);
+  };
+
+  toggleLoginModal = () => {
+    this.setState(!this.state.loginModal);
+    this.setState(!this.toggleRegisterModal);
+  };
+
   render() {
     return (
-      <Card className="card-login">
-        <CardBody>
-          <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
-            <div className="row justify-content-center form-group">
-              <div className="col-11">
-                <Control.text
-                  model=".name"
-                  id="name"
-                  name="name"
-                  placeholder="Full Name"
-                  className="form-control"
-                  validators={{
-                    required,
-                  }}
-                />
-                <Errors
-                  className="text-danger"
-                  model=".name"
-                  show="touched"
-                  component="div"
-                  messages={{
-                    required: "Required",
-                  }}
-                />
-              </div>
-            </div>
-            <div className="row justify-content-center form-group">
-              <div className="col-11">
-                <Control.text
-                  model=".email"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  className="form-control"
-                  validators={{
-                    required,
-                    validateEmail,
-                  }}
-                />
-                <Errors
-                  className="text-danger"
-                  model=".email"
-                  show="touched"
-                  component="div"
-                  messages={{
-                    required: "Required",
-                    validateEmail: "Invalid email id",
-                  }}
-                />
-              </div>
-            </div>
-            <div className="row justify-content-center form-group">
-              <div className="col-11">
-                <Control.text
-                  model=".contactNum"
-                  id="contactNum"
-                  name="contactNum"
-                  placeholder="Contact"
-                  className="form-control"
-                  validators={{
-                    required,
-                  }}
-                />
-                <Errors
-                  className="text-danger"
-                  model=".contactNum"
-                  show="touched"
-                  component="div"
-                  messages={{
-                    required: "Required",
-                  }}
-                />
-              </div>
-            </div>
-            <div className="row justify-content-center form-group">
-              <div className="col-11">
-                <Control.select
-                  model=".requirement"
-                  id="requirement"
-                  name="requirement"
-                  className="form-control"
-                >
-                  <option>Part-Time Interested</option>
-                  <option>Marketing</option>
-                  <option>Daily Services</option>
-                  <option>Management</option>
-                  <option>IT Job</option>
-                  <option>Others</option>
-                </Control.select>
-              </div>
-            </div>
-            <div className="row justify-content-center form-group">
-              <div className="col-11">
-                <Control.select
-                  model=".experience"
-                  id="experience"
-                  name="experience"
-                  className="form-control"
-                >
-                  <option>Related Experience</option>
-                  <option>0-6 mnth </option>
-                  <option>6-12 mnth</option>
-                  <option>1+ yr</option>
-                  <option>2+ yr</option>
-                </Control.select>
-              </div>
-            </div>
-            <div className="row justify-content-center form-group">
-              <div className="col-11">
-                <Control.select
-                  model=".education"
-                  id="education"
-                  name="education"
-                  className="form-control"
-                >
-                  <option>Highest Education</option>
-                  <option>School Graduates</option>
-                  <option>Bachelor Degree</option>
-                  <option>Masters Degree</option>
-                  <option>Course Certified</option>
-                  <option>None</option>
-                </Control.select>
-              </div>
-            </div>
-            <div className="row justify-content-center form-group">
-              <div className="col-11 mt-3">
-                <Button type="submit" color="primary" className="loginButton">
-                  Sign Up
-                </Button>
-              </div>
-            </div>
-          </LocalForm>
-          <h6>
-            Already have an account? {"   "}
-            <a href="#" onClick={this.props.toggleRegisterModal}>
-              Sign In
-            </a>
-          </h6>
-        </CardBody>
-      </Card>
+      <Modal
+        isOpen={this.state.registerModal}
+        toggle={this.toggleRegisterModal}
+      >
+        <ModalHeader
+          toggle={this.toggleRegisterModal}
+          className="modalHeader bg-info"
+        >
+          <h4>Hunt | Part-Time</h4>
+          <h5>Sign up for free !</h5>
+        </ModalHeader>
+        <ModalBody>
+          <Card className="card-login">
+            <CardBody>
+              <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
+                <div className="row justify-content-center form-group">
+                  <div className="col-11">
+                    <Control.text
+                      model=".name"
+                      id="name"
+                      name="name"
+                      placeholder="Full Name"
+                      className="form-control"
+                      validators={{
+                        required,
+                      }}
+                    />
+                    <Errors
+                      className="text-danger"
+                      model=".name"
+                      show="touched"
+                      component="div"
+                      messages={{
+                        required: "Required",
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="row justify-content-center form-group">
+                  <div className="col-11">
+                    <Control.text
+                      model=".email"
+                      id="email"
+                      name="email"
+                      placeholder="Email"
+                      className="form-control"
+                      validators={{
+                        required,
+                        validateEmail,
+                      }}
+                    />
+                    <Errors
+                      className="text-danger"
+                      model=".email"
+                      show="touched"
+                      component="div"
+                      messages={{
+                        required: "Required",
+                        validateEmail: "Invalid email id",
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="row justify-content-center form-group">
+                  <div className="col-11">
+                    <Control.text
+                      model=".contactNum"
+                      id="contactNum"
+                      name="contactNum"
+                      placeholder="Contact"
+                      className="form-control"
+                      validators={{
+                        required,
+                      }}
+                    />
+                    <Errors
+                      className="text-danger"
+                      model=".contactNum"
+                      show="touched"
+                      component="div"
+                      messages={{
+                        required: "Required",
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="row justify-content-center form-group">
+                  <div className="col-11">
+                    <Control.select
+                      model=".requirement"
+                      id="requirement"
+                      name="requirement"
+                      className="form-control"
+                    >
+                      <option>Part-Time Interested</option>
+                      <option>Marketing</option>
+                      <option>Daily Services</option>
+                      <option>Management</option>
+                      <option>IT Job</option>
+                      <option>Others</option>
+                    </Control.select>
+                  </div>
+                </div>
+                <div className="row justify-content-center form-group">
+                  <div className="col-11">
+                    <Control.select
+                      model=".experience"
+                      id="experience"
+                      name="experience"
+                      className="form-control"
+                    >
+                      <option>Related Experience</option>
+                      <option>0-6 mnth </option>
+                      <option>6-12 mnth</option>
+                      <option>1+ yr</option>
+                      <option>2+ yr</option>
+                    </Control.select>
+                  </div>
+                </div>
+                <div className="row justify-content-center form-group">
+                  <div className="col-11">
+                    <Control.select
+                      model=".education"
+                      id="education"
+                      name="education"
+                      className="form-control"
+                    >
+                      <option>Highest Education</option>
+                      <option>School Graduates</option>
+                      <option>Bachelor Degree</option>
+                      <option>Masters Degree</option>
+                      <option>Course Certified</option>
+                      <option>None</option>
+                    </Control.select>
+                  </div>
+                </div>
+                <div className="row justify-content-center form-group">
+                  <div className="col-11 mt-3">
+                    <Button
+                      type="submit"
+                      color="primary"
+                      className="loginButton"
+                    >
+                      Sign Up
+                    </Button>
+                  </div>
+                </div>
+              </LocalForm>
+              <h6>
+                Already have an account? {"   "}
+                {/* <a href="#" onClick={this.toggleRegisterModal}>
+                  Sign In
+                </a> */}
+                <Link to="/login" onClick={this.toggleRegisterModal}>
+                  Sign in
+                </Link>
+              </h6>
+            </CardBody>
+          </Card>
+        </ModalBody>
+      </Modal>
     );
   }
 }
