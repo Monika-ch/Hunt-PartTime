@@ -1,6 +1,7 @@
 import React from "react";
 import { ModalBody, ModalHeader, Modal, Button, Navbar } from "reactstrap";
 import Login from "./Login";
+import Register from "./RegisterUser";
 
 class Header extends React.Component {
   constructor(props) {
@@ -8,28 +9,27 @@ class Header extends React.Component {
     this.state = {
       isNavOpen: false,
       loginModal: false,
-      registerModel: false,
+      registerModal: false,
     };
-    this.toggleNav = this.toggleNav.bind(this);
-    this.toggleLoginModal = this.toggleLoginModal.bind(this);
-    // this.toggleRegisterModel = this.toggleRegisterModel.bind(this);
   }
 
-  toggleNav() {
+  toggleNav = () => {
     this.setState({
       isNavOpen: !this.state.isNavOpen,
     });
-  }
-  toggleLoginModal() {
+  };
+  toggleLoginModal = () => {
     this.setState({
       loginModal: !this.state.loginModal,
+      registerModal: false,
     });
-  }
-  // toggleRegisterModel(){
-  //   this.setState({
-  //     registerModel : !this.state.registerModel
-  //   });
-  // }
+  };
+  toggleRegisterModal = () => {
+    this.setState({
+      registerModal: !this.state.registerModal,
+      // loginModal: false,
+    });
+  };
   render() {
     const closeBtn = (
       <Button className="close" onClick={this.toggleLoginModal}>
@@ -38,7 +38,7 @@ class Header extends React.Component {
     );
     return (
       <React.Fragment>
-        <Navbar sticky="top">
+        <Navbar sticky="top" className="m-0 p-0">
           <div className="container-fluid navbar">
             <div className="Hunt col-1">
               <h1>Hunt</h1>
@@ -46,10 +46,10 @@ class Header extends React.Component {
             </div>
 
             <span
-              className=" Nav-sign-in ml-auto"
+              className=" Nav-sign-in ml-auto btn btn-outline-info"
               onClick={this.toggleLoginModal}
             >
-              Sign ⅈn
+              Sign in
             </span>
             <Modal
               isOpen={this.state.loginModal}
@@ -64,7 +64,27 @@ class Header extends React.Component {
                 <h5>Sign In !</h5>
               </ModalHeader>
               <ModalBody>
-                <Login />
+                <Login toggleLoginModal={this.toggleRegisterModal} />
+              </ModalBody>
+            </Modal>
+
+            <Modal
+              isOpen={this.state.registerModal}
+              toggle={this.toggleRegisterModal}
+            >
+              <ModalHeader
+                toggle={this.toggleRegisterModal}
+                close={closeBtn}
+                className="modalHeader bg-info"
+              >
+                <h4>Hunt | Part-Time</h4>
+                <h5>Sign In !</h5>
+              </ModalHeader>
+              <ModalBody>
+                <Register
+                  addUser={this.props.addUser}
+                  toggleRegisterModal={this.toggleLoginModal}
+                />
               </ModalBody>
             </Modal>
           </div>

@@ -12,7 +12,7 @@ class JobSearch extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="jobSearch bg-info mt-4 pt-2">
+        <div className="jobSearch bg-info">
           <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
             <div className="form-group row">
               <span className="jobTitle mt-2 mr-4">

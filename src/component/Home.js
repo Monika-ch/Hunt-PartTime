@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { ModalBody, ModalHeader, Modal, Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Register from "./RegisterUser";
+import Login from "./Login";
+
 import JobsData from "./JobsData";
 import JobSearch from "./JobSearch";
 
@@ -12,8 +14,16 @@ function Home(props) {
   };
 
   const [searchInput, setSearchInput] = useState(null);
+
   const [loginModal, setloginModal] = useState(false);
-  const toggleLoginModal = () => setloginModal(!loginModal);
+  const [registerModal, setregisterModal] = useState(false);
+  const toggleLoginModal = () => {
+    setloginModal(!loginModal);
+    setregisterModal(false);
+  };
+  const toggleRegisterModal = () => {
+    setregisterModal(!registerModal);
+  };
   const closeBtn = (
     <Button className="close" onClick={toggleLoginModal}>
       &times;
@@ -32,27 +42,45 @@ function Home(props) {
       <div className="jumbotron jumbotron-fluid mt-0 mb-0">
         <div className="container pt-0">
           <p className="lead pt-0">Looking For Part Times ?</p>
-          <h1 className="display-3">Now Hire or Get Hired.</h1>
+          <h1 className="display-4 ">Now Hire or Get Hired.</h1>
           <hr className="my-2" />
-          {/* <p>More info</p> */}
+          <p>More info</p>
           <p className="lead mt-4">
-            <span className="btn btn-primary btn-lg" onClick={toggleLoginModal}>
+            <span
+              className="btn btn-primary btn-lg"
+              onClick={toggleRegisterModal}
+            >
               Register Now
             </span>
-            <Modal isOpen={loginModal} toggle={toggleLoginModal}>
+            <Modal isOpen={registerModal} toggle={toggleRegisterModal}>
               <ModalHeader
-                toggle={toggleLoginModal}
-                close={closeBtn}
-                gin
+                toggle={toggleRegisterModal}
                 className="modalHeader bg-info"
               >
-                <h4 className="welcome">Hunt | Part-Time</h4>
+                <h4>Hunt | Part-Time</h4>
                 <h5>Sign up for free !</h5>
               </ModalHeader>
               <ModalBody>
-                <Register addUser={props.addUser} />
+                <Register
+                  addUser={props.addUser}
+                  toggleRegisterModal={toggleLoginModal}
+                />
               </ModalBody>
             </Modal>
+
+            {/* <Modal isOpen={loginModal} toggle={toggleLoginModal}>
+              <ModalHeader
+                toggle={toggleLoginModal}
+                close={closeBtn}
+                className="modalHeader bg-info"
+              >
+                <h4>Hunt | Part-Time</h4>
+                <h5>Sign up for free !</h5>
+              </ModalHeader>
+              <ModalBody>
+                <Login toggleLoginModal={toggleRegisterModal} />
+              </ModalBody>
+            </Modal> */}
           </p>
         </div>
       </div>

@@ -104,9 +104,9 @@ class Login extends Component {
           </LocalForm>
           <h6>
             New User?{" "}
-            <Link to="/registerUser" className="signUp">
+            <a href="#" onClick={this.props.toggleLoginModal}>
               Sign Up
-            </Link>
+            </a>
           </h6>
         </CardBody>
       </Card>

@@ -15,6 +15,7 @@
     "jspdf-autotable": "^3.5.3",
     "plotly.js": "^1.54.1",
     "react": "^16.13.1",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-bootstrap": "^1.0.1",
     "react-calendar": "^3.1.0",
     "react-datepicker": "^2.16.0",
@@ -23,6 +24,7 @@
     "react-redux": "^5.0.7",
     "react-redux-form": "^1.16.8",
     "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.0.0",
     "react-scripts": "^3.4.1",
     "reactstrap": "^5.0.0",
     "redux": "^3.7.2"

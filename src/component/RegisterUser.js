@@ -27,7 +27,7 @@ class Register extends Component {
         contactNum: false,
       },
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit = (values) => {
@@ -179,9 +179,9 @@ class Register extends Component {
           </LocalForm>
           <h6>
             Already have an account? {"   "}
-            <Link to="/login" className="signUp">
-              Log In
-            </Link>
+            <a href="#" onClick={this.props.toggleRegisterModal}>
+              Sign In
+            </a>
           </h6>
         </CardBody>
       </Card>
