@@ -43,22 +43,25 @@ function Home(props) {
 
       <div className="jumbotron jumbotron-fluid mt-0 mb-0">
         <div className="container pt-0">
-          <p className="lead pt-0">Looking For Part Times ?</p>
-          <h1 className="display-4 ">Now Hire or Get Hired.</h1>
-          <hr className="my-2" />
-          <p>
-            <Link className="jumbo-link" to="/about">
-              More info
-            </Link>
-          </p>
-          <p className="lead mt-4">
-            <span
-              className="btn btn-primary btn-lg"
-              onClick={props.toggleRegisterModal}
-            >
-              Register Now
-            </span>
-            {/* <Modal isOpen={registerModal} toggle={toggleRegisterModal}>
+          <div className="row">
+            <div className="col-md-8 pl-5 mx-auto">
+              <p className="lead pt-0">Looking For Part Times ?</p>
+              <h1 className="display-4 ">Now Hire or Get Hired.</h1>
+              <hr className="my-2" />
+              <p>
+                <Link className="jumbo-link" to="/about">
+                  More info
+                </Link>
+              </p>
+              <p className="lead mt-4">
+                <span
+                  className="btn btn-primary btn-lg"
+                  onClick={props.toggleRegisterModal}
+                >
+                  Register Now
+                </span>
+              </p>
+              {/* <Modal isOpen={registerModal} toggle={toggleRegisterModal}>
               <ModalHeader
                 toggle={toggleRegisterModal}
                 className="modalHeader bg-info"
@@ -67,14 +70,13 @@ function Home(props) {
                 <h5>Sign up for free !</h5>
               </ModalHeader>
               <ModalBody> */}
-            <Register
-              addUser={props.addUser}
-              toggleRegisterModal={props.toggleLoginModal}
-            />
-            {/* </ModalBody>
+              <Register
+                addUser={props.addUser}
+                toggleRegisterModal={props.toggleLoginModal}
+              />
+              {/* </ModalBody>
             </Modal> */}
-
-            {/* <Modal isOpen={loginModal} toggle={toggleLoginModal}>
+              {/* <Modal isOpen={loginModal} toggle={toggleLoginModal}>
               <ModalHeader
                 toggle={toggleLoginModal}
                 close={closeBtn}
@@ -87,7 +89,17 @@ function Home(props) {
                 <Login toggleLoginModal={toggleRegisterModal} />
               </ModalBody>
             </Modal> */}
-          </p>
+            </div>
+            <div className="col-lg-3 col-sm-6 col-8 m-auto">
+              <div>
+                <Link to="/createJob">
+                  <h3 className="createJob">
+                    Create Job <i className="fa fa-plus mt-1 pt-1"></i>
+                  </h3>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="container-fluid strip-one">

@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
+import CreateJob from "./CreateJob";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { addUser } from "../redux/ActionCreators";
@@ -51,6 +52,7 @@ class Main extends Component {
           /> */}
           <Route exact path="/about" render={() => <About />} />
           <Route exact path="/contact" render={() => <Contact />} />
+          <Route exact path="/createJob" render={() => <CreateJob />} />
 
           <Redirect to="/home" />
         </Switch>

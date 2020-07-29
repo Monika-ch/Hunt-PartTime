@@ -180,30 +180,6 @@ class Contact extends Component {
                             />
                           </div>
                         </div>
-                        {/* <div className="row justify-content-center form-group">
-                          <div className="col-10">
-                            <div className="form-check">
-                              <label check>
-                              <Control.checkbox
-                                model=".agree"
-                                name="agree"
-                                className="form-check-input mt-2"
-                              />
-                              May we contact you?
-                              </label>
-                            </div>
-                          </div>
-                          <div className="col-10">
-                            <Control.select
-                              model=".contactType"
-                              name="contactType"
-                              className="form-control"
-                            >
-                              <option>By Phone</option>
-                              <option>By Email</option>
-                            </Control.select>
-                          </div>
-                        </div> */}
 
                         <div className="row justify-content-center form-group">
                           <div className="col-10 mt-3">

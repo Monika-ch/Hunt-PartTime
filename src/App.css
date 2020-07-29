@@ -144,6 +144,24 @@ h5 {
   font-weight: bold;
 }
 
+.createJob {
+  padding: 80px 10px;
+  background: #38a1be67;
+  /* border-radius: 50%; */
+  color: #2184a0;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+.fa-plus {
+  font-size: larger;
+  color: #b488ff8f;
+}
+
+
 .strip-one {
   text-align: center;
   background-image: repeating-linear-gradient(205deg,
