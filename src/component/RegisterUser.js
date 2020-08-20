@@ -8,7 +8,6 @@ import {
   CardBody,
 } from "reactstrap";
 import { Control, LocalForm, Errors } from "react-redux-form";
-import { Link } from "react-router-dom";
 
 const required = (val) => val && val.length;
 const validateEmail = (val) => {
@@ -28,15 +27,12 @@ class Register extends Component {
       experience: "",
       education: "",
       isRegistered: false,
-      registerModal: false,
-      loginModal: false,
       touched: {
         name: false,
         email: false,
         contactNum: false,
       },
     };
-    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit = (values) => {
@@ -52,23 +48,14 @@ class Register extends Component {
     alert("Successfully Added");
   };
 
-  toggleRegisterModal = () => {
-    this.setState(!this.state.registerModal);
-  };
-
-  toggleLoginModal = () => {
-    this.setState(!this.state.loginModal);
-    this.setState(!this.toggleRegisterModal);
-  };
-
   render() {
     return (
       <Modal
-        isOpen={this.state.registerModal}
-        toggle={this.toggleRegisterModal}
+        isOpen={this.props.registerModal}
+        toggle={this.props.toggleRegisterModal}
       >
         <ModalHeader
-          toggle={this.toggleRegisterModal}
+          toggle={this.props.toggleRegisterModal}
           className="modalHeader bg-info"
         >
           <h4>Hunt | Part-Time</h4>
@@ -213,12 +200,9 @@ class Register extends Component {
               </LocalForm>
               <h6>
                 Already have an account? {"   "}
-                {/* <a href="#" onClick={this.toggleRegisterModal}>
-                  Sign In
-                </a> */}
-                <Link to="/login" onClick={this.toggleRegisterModal}>
+                <a href="#" onClick={this.props.toggleLoginModal}>
                   Sign in
-                </Link>
+                </a>
               </h6>
             </CardBody>
           </Card>

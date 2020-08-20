@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from "./Header";
 import Footer from "./Footer";
 import Home from "./Home";
 import About from "./About";
@@ -8,7 +7,6 @@ import CreateJob from "./CreateJob";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { addUser } from "../redux/ActionCreators";
-// import Register from "./RegisterUser";
 import Login from "./Login";
 
 const mapDispatchToProps = {
@@ -27,15 +25,12 @@ class Main extends Component {
   render() {
     return (
       <div className="overlay">
-        <Header addUser={this.props.addUser} />
         <Switch>
           <Route
             exact
             path="/home"
             render={() => <Home addUser={this.props.addUser} />}
           />
-          {/* <Route path="/home" component={HomePage} addUser={this.props.addUser}/> */}
-          {/* <Route path="/todo" component={TodoList} /> */}
           <Route
             exact
             path="/login"
@@ -43,17 +38,9 @@ class Main extends Component {
               <Login isRegistered={userIsRegistered} users={this.props.users} />
             )}
           />
-          {/* <Route
-            exact
-            path="/registerUser"
-            render={() => (
-              <Register users={this.props.users} addUser={this.props.addUser} />
-            )}
-          /> */}
           <Route exact path="/about" render={() => <About />} />
           <Route exact path="/contact" render={() => <Contact />} />
           <Route exact path="/createJob" render={() => <CreateJob />} />
-
           <Redirect to="/home" />
         </Switch>
 

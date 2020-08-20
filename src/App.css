@@ -55,10 +55,8 @@ h5 {
   letter-spacing: 2px;
 }
 
-
 .hunt-link {
   color: #9575cd;
-
 }
 
 .hunt-link:hover {
@@ -76,7 +74,6 @@ h5 {
   padding-left: 4px;
   font-size: 20px;
   letter-spacing: 1px;
-
 }
 
 .navbar {
@@ -92,7 +89,7 @@ h5 {
       hsla(194, 94%, 69%, 0.14) 55px,
       transparent 55px,
       transparent 110px),
-    linear-gradient(236deg, rgb(255, 255, 255), rgb(255, 255, 255));
+    linear-gradient(236deg, rgb(204, 253, 255), rgb(255, 255, 255));
 }
 
 .Nav-sign-in {
@@ -110,7 +107,6 @@ h5 {
   border-radius: 3px;
   border: 1px solid #00b0ff;
   font-size: larger;
-
 }
 
 .jobTitle {
@@ -120,16 +116,16 @@ h5 {
 .jumbotron {
   /* background: #fffcdc; */
   background-image: repeating-linear-gradient(0deg,
-      hsla(194, 94%, 69%, 0.14) 0px,
-      hsla(194, 94%, 69%, 0.14) 55px,
+      hsla(194, 94%, 69%, 0.09) 0px,
+      hsla(194, 94%, 69%, 0.09) 55px,
       transparent 55px,
       transparent 110px),
     repeating-linear-gradient(90deg,
-      hsla(194, 94%, 69%, 0.14) 0px,
-      hsla(194, 94%, 69%, 0.14) 55px,
+      hsla(194, 94%, 69%, 0.09) 0px,
+      hsla(194, 94%, 69%, 0.09) 55px,
       transparent 55px,
       transparent 110px),
-    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(146, 248, 252));
   min-height: 48.9vh;
   margin-top: 36px;
 }
@@ -161,7 +157,6 @@ h5 {
   color: #b488ff8f;
 }
 
-
 .strip-one {
   text-align: center;
   background-image: repeating-linear-gradient(205deg,
@@ -174,7 +169,7 @@ h5 {
       rgba(102, 216, 250, 0.08) 35px,
       transparent 35px,
       transparent 70px),
-    linear-gradient(295deg, rgb(255, 255, 255), rgb(255, 255, 255));
+    linear-gradient(295deg, rgb(255, 255, 255), rgb(207, 252, 252));
 }
 
 .strip-one p {
@@ -194,7 +189,6 @@ h5 {
 
 .Jobdeck {
   background-color: rgba(0, 255, 255, 0.15);
-
   border-bottom: 1px solid aqua;
 }
 

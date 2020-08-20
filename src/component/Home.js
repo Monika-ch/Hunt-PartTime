@@ -1,46 +1,44 @@
 import React, { useState } from "react";
-import { ModalBody, ModalHeader, Modal, Button } from "reactstrap";
 import { Link } from "react-router-dom";
-
 import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./Header";
 import Register from "./RegisterUser";
-import Login from "./Login";
-
 import JobsData from "./JobsData";
 import JobSearch from "./JobSearch";
 
 function Home(props) {
+  const [searchInput, setSearchInput] = useState(null);
   const queryData = (title, location, salary) => {
     console.log(title, location, salary);
     setSearchInput({ title: title, location: location, salary: salary });
   };
+  const [registerModal, setRegisterModal] = useState(false);
+  const toggleRegisterModal = () => {
+    setLoginModal(false);
+    setRegisterModal(!registerModal);
+  };
 
-  const [searchInput, setSearchInput] = useState(null);
-
-  // const [loginModal, setloginModal] = useState(false);
-  // const [registerModal, setregisterModal] = useState(false);
-  // const toggleLoginModal = () => {
-  //   setloginModal(!loginModal);
-  //   setregisterModal(false);
-  // };
-  // const toggleRegisterModal = () => {
-  //   setregisterModal(!registerModal);
-  // };
-  // const closeBtn = (
-  //   <Button className="close" onClick={toggleLoginModal}>
-  //     &times;
-  //   </Button>
-  // );
+  const [loginModal, setLoginModal] = useState(false);
+  const toggleLoginModal = () => {
+    setLoginModal(!loginModal);
+    setRegisterModal(false);
+  };
 
   return (
     <React.Fragment>
+      <Header
+        loginModal={loginModal}
+        registerModal={registerModal}
+        toggleLoginModal={toggleLoginModal}
+        toggleRegisterModal={toggleRegisterModal}
+      />
+
       <JobSearch queryData={queryData} />
       {searchInput != null && (
         <div className="container-fluid home-container my-3">
           <JobsData searchQuery={searchInput} />
         </div>
       )}
-
       <div className="jumbotron jumbotron-fluid mt-0 mb-0">
         <div className="container pt-0">
           <div className="row">
@@ -56,40 +54,21 @@ function Home(props) {
               <p className="lead mt-4">
                 <span
                   className="btn btn-primary btn-lg"
-                  onClick={props.toggleRegisterModal}
+                  onClick={toggleRegisterModal}
                 >
                   Register Now
                 </span>
               </p>
-              {/* <Modal isOpen={registerModal} toggle={toggleRegisterModal}>
-              <ModalHeader
-                toggle={toggleRegisterModal}
-                className="modalHeader bg-info"
-              >
-                <h4>Hunt | Part-Time</h4>
-                <h5>Sign up for free !</h5>
-              </ModalHeader>
-              <ModalBody> */}
+
               <Register
+                loginModal={loginModal}
+                registerModal={registerModal}
+                toggleLoginModal={toggleLoginModal}
+                toggleRegisterModal={toggleRegisterModal}
                 addUser={props.addUser}
-                toggleRegisterModal={props.toggleLoginModal}
               />
-              {/* </ModalBody>
-            </Modal> */}
-              {/* <Modal isOpen={loginModal} toggle={toggleLoginModal}>
-              <ModalHeader
-                toggle={toggleLoginModal}
-                close={closeBtn}
-                className="modalHeader bg-info"
-              >
-                <h4>Hunt | Part-Time</h4>
-                <h5>Sign up for free !</h5>
-              </ModalHeader>
-              <ModalBody>
-                <Login toggleLoginModal={toggleRegisterModal} />
-              </ModalBody>
-            </Modal> */}
             </div>
+
             <div className="col-lg-3 col-sm-6 col-8 m-auto">
               <div>
                 <Link to="/createJob">
